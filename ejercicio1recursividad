@@ -1,0 +1,20 @@
+//Realizar un subprograma que permita calcular la siguiente serie:
+//a^n+a^(n-1)+a^(n-2)+...+a^2+a+1*/
+
+#include <stdio.h>
+int potencia(int a, int n){
+    if(n==0){
+        return 1;
+    }else{
+        a = a *(potencia(a, n-1));
+    }
+    return a;
+}
+int main(){
+    int numn, numero;
+    printf("Ingresar numero: ");
+    scanf("%d", &numero);
+    printf("Ingresar a que numero se desea elevar: ");
+    scanf("%d", &numn);
+    printf("El resultado final es: %d", potencia(numero, numn));
+}
