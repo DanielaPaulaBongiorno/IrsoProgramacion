@@ -1,0 +1,18 @@
+//Ejercicio 2: Realizar un subprograma que permita calcular la siguiente serie:
+//1+2+3+4+......+n
+#include <stdio.h>
+
+int suma(int num){
+    if (num >0){
+        num = num + (suma(num-1));
+    }else{
+        return 0;
+    }
+    return num;
+}
+int main(){
+    int n;
+    printf("Ingrese un numero: ");
+    scanf("%d", &n);
+    printf("La suma de los n numeros es: %d", suma(n));
+}
